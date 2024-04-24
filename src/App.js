@@ -7,7 +7,7 @@ function App() {
     setCatchValueInput(value);
   };
   const [trueFalse,setTrueFalse] = useState(false)
-  setTimeout(()=>{setTrueFalse(true);},5000)
+  setTimeout(()=>{setTrueFalse(true);},3000)
   return (
     <div className="App relative space-y-0 bg-gray-900 ">
       <div>
