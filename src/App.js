@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./Components/Header";
 function App() {
+  const [catchValueInput, setCatchValueInput] = useState("");
+  const handleCatchValueInput = (value) => {
+    setCatchValueInput(value);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App space-y-0 bg-gray-900">
+      <div>
+        <Header
+          catchValueInput={catchValueInput}
+          handleCatchValueInput={handleCatchValueInput}
+        />
+      </div>
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 }
