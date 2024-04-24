@@ -8,7 +8,11 @@ function Home() {
   return (
     <div className="">
       <div>
-        <Cards isHovered={isHovered} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+        <Cards
+          isHovered={isHovered}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+        />
       </div>
     </div>
   );

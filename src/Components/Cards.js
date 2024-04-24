@@ -25,7 +25,7 @@ function Cards(props) {
   return (
     <div className=" bg-gray-900  p-4 space-y-3">
       <div>
-        <ul className=" grid grid-cols-1 gap-3 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2">
+        <ul className=" grid  gap-3  2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1">
           <div
             data-aos="fade-up"
             className="isHoverStyle w-full col sm:col-span-2 h-72 overflow-hidden rounded-lg relative"

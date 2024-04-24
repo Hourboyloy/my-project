@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Weather from "../API/weather";
 function Header(props) {
   const { catchValueInput, handleCatchValueInput } = props;
   useEffect(() => {
@@ -52,22 +53,24 @@ function Header(props) {
               </svg>
             </div>
           </div>
-          <div className="cursor-pointer absolute w-full h-full -top-40  sm:-top-52 lg:-top-80  xl:-top-48 2xl:-top-56 flex justify-center items-center ">
-            <img
+          <div className="cursor-pointer absolute w-full h-full -top-40  sm:-top-52 lg:-top-44  xl:-top-48 2xl:-top-56 flex justify-center items-center">
+            {/* <img 
               data-aos="zoom-in"
               src={require(`../images/pic-header.jpg`)}
-              className="xl:w-3/12 rounded 2xl:hover:shadow z-10 2xl:hover:border 2xl:hover:border-gray-600 transition-all duration-75 sm:w-96 lg:w-5/12"
+              className="xl:w-3/12 rounded 2xl:hover:shadow z-10 2xl:hover:border 2xl:hover:border-gray-600 transition-all duration-75 w-64 sm:w-96 lg:w-5/12"
               alt=""
-            />
+            /> */}
+            <div className=" w-72 sm:w-6/12 lg:w-4/12 xl:w-3/12 2xl:w-1/5" data-aos="zoom-in">
+              <Weather />
+            </div>
           </div>
 
           <div className="w-full h-full absolute xl:-top-10">
             <div className=" w-full h-full flex justify-center items-center">
-              <div className="w-full flex flex-col justify-start items-center space-y-2 lg:space-y-1">
+              <div className="w-full flex flex-col justify-start items-center space-y-1">
                 <ul
-                  className=" font-semibold flex space-x-2  xl:-ml-24 2xl:-ml-44 text-xl text-slate-300 sm:-ml-64  lg:-ml-64"
+                  className=" font-semibold text-sm sm:text-lg flex space-x-7 lg:space-x-20 md:space-x-20 md:-ml-1 xl:space-x-8 2xl:space-x-12 xl:-ml-1 2xl:-ml-1 text-slate-300 sm:-ml-64  lg:-ml-0"
                   data-aos="fade-right"
-                  // className="sm:-ml-64 lg:text-lg sm:text-2xl xl:-ml-48 lg:-ml-28  flex space-x-4 items-center text-slate-300 pl-3"
                 >
                   <li className=" text-slate-50">
                     <Link to="/web">Web</Link>
