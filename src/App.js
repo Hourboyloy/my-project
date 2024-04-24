@@ -6,16 +6,28 @@ function App() {
   const handleCatchValueInput = (value) => {
     setCatchValueInput(value);
   };
+  const [trueFalse,setTrueFalse] = useState(false)
+  setTimeout(()=>{setTrueFalse(true);},5000)
   return (
-    <div className="App space-y-0 bg-gray-900">
+    <div className="App relative space-y-0 bg-gray-900 ">
       <div>
-        <Header
-          catchValueInput={catchValueInput}
-          handleCatchValueInput={handleCatchValueInput}
-        />
+        {trueFalse ? (
+          <div className=" ">
+            <Header
+              catchValueInput={catchValueInput}
+              handleCatchValueInput={handleCatchValueInput}
+            />
+          </div>
+        ) : (
+          <div className=" h-screen flex justify-center items-center bg-white">
+            <div className="loader rounded"></div>
+          </div>
+        )}
       </div>
       <div>
-        <Outlet />
+        {
+          trueFalse?<Outlet />:""
+        }
       </div>
     </div>
   );
