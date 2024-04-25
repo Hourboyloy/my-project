@@ -22,12 +22,10 @@
 }
 
 /* for loading page */
-/* HTML: <div class="loader"></div> */
 .loader {
   width: fit-content;
   font-weight: bold;
   font-family: monospace;
-  font-size: 50px;
   background: linear-gradient(90deg,#000 50%,#0000 0) right/200% 100%;
   animation: l21 2s infinite linear;
 }
