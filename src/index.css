@@ -7,7 +7,6 @@
   background-image: url(../src//images/bg.webp);
    background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 @media (min-width:1536px) {
@@ -23,25 +22,22 @@
 
 /* for loading page */
 .loader {
-  width: fit-content;
-  font-weight: bold;
-  font-family: monospace;
-  background: linear-gradient(90deg,#000 50%,#0000 0) right/200% 100%;
-  animation: l21 2s infinite linear;
+  display: flex;
+  align-items: center;
 }
 
-.loader::before {
-  content: "Loading...";
-  color: #0000;
-  padding: 0 5px;
-  background: inherit;
-  background-image: linear-gradient(90deg,#fff 50%,#000 0);
-  -webkit-background-clip: text;
-  background-clip: text;
+.icon {
+  animation: spin 1s linear infinite;
+  stroke: rgba(107, 114, 128, 1);
 }
 
-@keyframes l21 {
-  100% {
-    background-position: left
+.loading-text {
+  font-weight: 500;
+  color: rgba(107, 114, 128, 1);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }

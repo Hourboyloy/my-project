@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Components/Header";
+import Loader from "./Components/Loader";
 function App() {
   const [catchValueInput, setCatchValueInput] = useState("");
   const handleCatchValueInput = (value) => {
     setCatchValueInput(value);
   };
   const [trueFalse,setTrueFalse] = useState(false)
-  setTimeout(()=>{setTrueFalse(true);},4000)
+  setTimeout(()=>{setTrueFalse(true);},2000)
   return (
     <div className="App relative space-y-0 bg-gray-900 ">
       <div>
@@ -15,7 +16,8 @@ function App() {
           ""
         ) : (
           <div className=" h-screen flex justify-center items-center bg-white">
-            <div className="loader rounded text-sm sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"></div>
+            <Loader/>
+
           </div>
         )}
         {trueFalse ? (
